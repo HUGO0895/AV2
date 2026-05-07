@@ -451,6 +451,10 @@ Modal de confirmação para exclusão de registro de teste.
 ## 🚀 Como Rodar
 
 ```bash
+# Clonar Repositório
+git clone git@github.com:HUGO0895/AV2.git
+# Pasta Certa
+cd AV2/Aerocode
 # Instalar dependências
 npm install
 
