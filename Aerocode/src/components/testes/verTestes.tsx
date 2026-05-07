@@ -4,7 +4,11 @@ import FormDeletarTeste from './deletarTeste';
 
 interface TesteProps {
     aberto: boolean;
-    testes: Array<{ tipo: string, resultado: string, data: string }>;
+    testes: Array<{ 
+        tipo: 'ELÉTRICO' | 'HIDRÁULICO' | 'AERODINÂMICO', 
+        resultado: 'APROVADO' | 'REPROVADO', 
+        data: string 
+    }>;
 }
 
 function TestesDaAeronave({ aberto, testes }: TesteProps) {
@@ -22,13 +26,13 @@ function TestesDaAeronave({ aberto, testes }: TesteProps) {
                          style={{ borderLeftColor: teste.resultado === 'APROVADO' ? '#22c55e' : '#ef4444' }}>
                         
                         <div className="flex justify-between items-start">
-                            <span className="text-[10px] font-black text-gray-400 uppercase tracking-widest">{teste.tipo}</span>
+                            <span className="text-[10px] font-black text-gray-400 uppercase tracking-widest">TESTE {teste.tipo}</span>
                             <span className={`px-2 py-1 rounded-lg text-[10px] font-bold border ${teste.resultado === 'APROVADO' ? 'bg-green-50 text-green-700 border-green-200' : 'bg-red-50 text-red-700 border-red-200'}`}>
                                 {teste.resultado}
                             </span>
                         </div>
 
-                        <h3 className="text-lg font-bold text-[#123354]">Relatório de Inspeção</h3>
+                        <h3 className="text-lg font-bold text-[#123354]">{teste.tipo}</h3>
                         <p className="text-xs text-gray-500 font-medium">Data: {teste.data}</p>
 
                         <div className="flex gap-2 mt-4">

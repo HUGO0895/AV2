@@ -54,7 +54,7 @@ function GerenciarFuncionarios() {
                     
                 </button>
                <div className=''>
-               { ["TODOS",'ENGENHEIRO','OPERADOR','ADMINISTRADOR'].map(((tipo)=>(
+               { ["TODOS",'ENGENHEIRO','OPERADOR','ADMINISTRADOR'].map(((tipo)=>
                    <button
                                 key={tipo}
                                 onClick={() => setNIvel(tipo)}
@@ -66,7 +66,7 @@ function GerenciarFuncionarios() {
                             >
                                 {tipo}
                             </button>
-               ))) }
+               ))} 
              </div>
                 </div>
                 

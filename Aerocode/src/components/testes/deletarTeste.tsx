@@ -1,6 +1,14 @@
 import '../../index.css';
 
-function FormDeletarTeste({ aberto, fechado, tipoTeste }: { aberto: boolean, fechado: () => void, tipoTeste: string }) {
+// Interface ajustada para usar a tipagem estrita do sistema Aerocode
+interface DeletarTesteProps {
+    aberto: boolean;
+    fechado: () => void;
+    // Define que o tipo de teste deve ser um dos três permitidos na AV1
+    tipoTeste: 'ELETRICO' | 'HIDRAULICO' | 'AERODINAMICO' | string; 
+}
+
+function FormDeletarTeste({ aberto, fechado, tipoTeste }: DeletarTesteProps) {
     if (!aberto) return null;
 
     return (
@@ -25,7 +33,7 @@ function FormDeletarTeste({ aberto, fechado, tipoTeste }: { aberto: boolean, fec
                 <h2 className="text-xl font-bold text-[#123354] mb-2">Excluir Relatório</h2>
                 
                 <p className="text-gray-500 mb-8 text-sm px-2">
-                    Tem certeza que deseja apagar o registro de <strong>{tipoTeste}</strong> permanentemente?
+                    Tem certeza que deseja apagar o registro de <strong>TESTE {tipoTeste}</strong> permanentemente?
                 </p>
 
                 <div className="flex gap-3">
@@ -38,7 +46,7 @@ function FormDeletarTeste({ aberto, fechado, tipoTeste }: { aberto: boolean, fec
                     <button 
                         className="flex-1 py-3 bg-red-600 rounded-xl font-bold text-white shadow-lg shadow-red-200 active:scale-95 transition-all"
                     >
-                        Excluir
+                        Confirmar Exclusão
                     </button>
                 </div>
             </div>

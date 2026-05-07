@@ -50,6 +50,13 @@ function Navbar() {
                     </span>
                 </Link>
 
+                 <Link to="/relatorios" className="group relative w-10 flex justify-center hover:scale-110 transition-transform">
+                    <Icon icon="ix:calendar-week-filled" className='text-5xl text-[#123354]' />
+                    <span className="absolute top-12 scale-0 group-hover:scale-100 transition-all bg-[#123354] text-white text-[10px] font-bold py-1 px-2 rounded whitespace-nowrap pointer-events-none">
+                        RELATORIOS
+                    </span>
+                </Link>
+
             </nav>
         </div>
     )

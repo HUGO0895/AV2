@@ -105,7 +105,7 @@ function VerAeronaves() {
                                 </div>
                                 <div className="flex justify-between items-center bg-gray-50 p-3 rounded-xl">
                                     <span className="text-[11px] font-bold text-gray-400 uppercase">Capacidade</span>
-                                    <span className="text-sm font-bold text-[#123354]">{aero.capacidade} PAX</span>
+                                    <span className="text-sm font-bold text-[#123354]">{aero.capacidade} Passageiros</span>
                                 </div>
                             </div>
 

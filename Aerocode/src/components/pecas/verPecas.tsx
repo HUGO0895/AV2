@@ -56,7 +56,7 @@ function VerPecas(){
     const [Pecas,setPecas]=useState(true)
     const [EsolhaAero,setEscolhaAero]=useState(0)
     const [ModalCadastro,setModalCadastro]=useState(false)
-      const [Busca,setBusca]=useState('Todos')
+      const [Busca,setBusca]=useState('TODOS')
     const [BuscaNome,setBuscaNome]=useState('')
     return(
            <div className="max-w-5xl w-full mx-auto  p-8 bg-white border border-gray-200 rounded-3xl shadow-sm flex flex-col gap-6">
@@ -71,7 +71,7 @@ function VerPecas(){
                         onChange={(e) => setBuscaNome(e.target.value)}
                     />
                  </div> 
-                <button type='button' className='bg-[#123354] text-white px-8 py-3 rounded-2xl font-semibold hover:bg-[#1a4a7a] transition-all active:scale-95' onClick={()=> setModalCadastro(true)}>Adicionar Pecas</button></div>
+                <button type='button' className='bg-[#123354] text-white px-8  rounded-2xl font-semibold hover:bg-[#1a4a7a] transition-all active:scale-95' onClick={()=> setModalCadastro(true)}>Adicionar Pecas</button></div>
             <div className='flex justify-between'>
              <select name="seletor" id="sel " defaultValue={0} className='border-2 rounded-2xl max-w-xs px-4 py-3 border-gray-100 text-[#123354] font-bold outline-none focus:border-[#123354]' onChange={(a)=>{const vector=a.target.value; setPecas(true);setEscolhaAero(Number(vector))}}>
             
