@@ -64,9 +64,9 @@ src/
 | `/aeronaves` | Gestão de Frota |
 | `/funcionarios` | Equipe |
 | `/etapas` | Fluxo de Etapas |
-| `/pecas` | Peças |
+| `/Pecas` | Peças |
 | `/testes` | Controle de Qualidade |
-| `/relatorio` | Relatórios |
+| `/relatorios` | Relatórios |
 
 ---
 
