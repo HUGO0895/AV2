@@ -21,7 +21,7 @@ const aeronavesComEtapas = [
             { tipo: 'AERODINÂMICO' as const, resultado: 'APROVADO' as const, responsavel: 'Vitor Bomfim' },
             { tipo: 'HIDRÁULICO' as const, resultado: 'REPROVADO' as const, responsavel: 'Mateus' }
         ]
-    },
+    }, // For
     { 
         codigo: 'AC-014', 
         modelo: 'Gripen NG', 
@@ -55,7 +55,7 @@ function Relatorios() {
             
             <main className="max-w-6xl mx-auto mt-4 p-4">
                 {/* Header de Filtros e Inputs */}
-                <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-8 bg-white p-8 rounded-3xl shadow-sm border border-gray-100">
+                <div  className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-8 bg-white p-8 rounded-3xl shadow-sm border border-gray-100">
                     <div>
                         <div className="flex items-center gap-2 text-[#123354] mb-1">
                             <FileText size={20} />
@@ -66,6 +66,7 @@ function Relatorios() {
                     </div>
 
                     <div className="flex flex-wrap gap-4">
+                        
                         {/* Input Cliente */}
                         <div className="flex flex-col gap-2">
                             <label className="text-xs font-bold text-gray-400 uppercase ml-1">Cliente</label>
